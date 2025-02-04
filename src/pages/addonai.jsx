@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 import EastOutlinedIcon from "@mui/icons-material/EastOutlined";
 
 const Addonai = () => {
+  const greenRectRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const { clientX: mouseX, clientY: mouseY } = e;
+    const greenRect = greenRectRef.current;
+
+    // Get the position of the green rect relative to the page
+    const { left, top, width, height } = greenRect.getBoundingClientRect();
+
+    // Calculate the position of the mouse relative to the green rect
+    const offsetX = mouseX - left;
+    const offsetY = mouseY - top;
+
+    // Apply the offset as a dynamic background position
+    greenRect.style.backgroundPosition = `${(offsetX / width) * 100}% ${
+      (offsetY / height) * 100
+    }%`;
+
+    // Dynamically update the position of the blur effect (::before pseudo-element)
+    const blurElement = greenRect.querySelector(".blur");
+    blurElement.style.left = `${offsetX - 150}px`; // Adjust to center the blur
+    blurElement.style.top = `${offsetY - 150}px`; // Adjust to center the blur
+  };
+
   return (
     <>
       <header></header>
@@ -30,6 +54,42 @@ const Addonai = () => {
         <img className="bg" src="/bg.png" alt="" />
         <div className="bg-logo">
           <img src="/file.png" alt="" />
+
+          <svg
+            className="absolute inset-0 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 will-change-transform pointer-events-none blur-md"
+            // width="480"
+            // height="480"
+            viewBox="0 0 480 480"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient id="pulse-a" x1="50%" x2="50%" y1="100%" y2="0%">
+                <stop offset="0%" stopColor="#064E3B4d" />
+                <stop offset="76.382%" stopColor="#115E594d" />
+                <stop offset="100%" stopColor="#14532D4d" />
+              </linearGradient>
+            </defs>
+            <g fillRule="evenodd">
+              <path
+                className="pulse"
+                fill="url(#pulse-a)"
+                fillRule="evenodd"
+                d="M240,0 C372.5484,0 480,107.4516 480,240 C480,372.5484 372.5484,480 240,480 C107.4516,480 0,372.5484 0,240 C0,107.4516 107.4516,0 240,0 Z M240,88.8 C156.4944,88.8 88.8,156.4944 88.8,240 C88.8,323.5056 156.4944,391.2 240,391.2 C323.5056,391.2 391.2,323.5056 391.2,240 C391.2,156.4944 323.5056,88.8 240,88.8 Z"
+              />
+              <path
+                className="pulse pulse-1"
+                fill="url(#pulse-a)"
+                fillRule="evenodd"
+                d="M240,0 C372.5484,0 480,107.4516 480,240 C480,372.5484 372.5484,480 240,480 C107.4516,480 0,372.5484 0,240 C0,107.4516 107.4516,0 240,0 Z M240,88.8 C156.4944,88.8 88.8,156.4944 88.8,240 C88.8,323.5056 156.4944,391.2 240,391.2 C323.5056,391.2 391.2,323.5056 391.2,240 C391.2,156.4944 323.5056,88.8 240,88.8 Z"
+              />
+              <path
+                className="pulse pulse-2"
+                fill="url(#pulse-a)"
+                fillRule="evenodd"
+                d="M240,0 C372.5484,0 480,107.4516 480,240 C480,372.5484 372.5484,480 240,480 C107.4516,480 0,372.5484 0,240 C0,107.4516 107.4516,0 240,0 Z M240,88.8 C156.4944,88.8 88.8,156.4944 88.8,240 C88.8,323.5056 156.4944,391.2 240,391.2 C323.5056,391.2 391.2,323.5056 391.2,240 C391.2,156.4944 323.5056,88.8 240,88.8 Z"
+              />
+            </g>
+          </svg>
         </div>
         <div className="page-2__text">
           <h4 className="color-text-small">Addon AI</h4>
@@ -65,6 +125,57 @@ const Addonai = () => {
           <button>
             B2C Model <EastOutlinedIcon style={{ color: "#00ac25" }} />
           </button>
+        </div>
+
+        <div className="highlights">
+          <div className="AIPowered">
+            <div className="AIPowered__text--container">
+              <div className="AIPowered__header">
+                {" "}
+                <h3> Effortless Ad Space Rental</h3>
+              </div>
+              <div className="AIPowered__p">
+                Simplifies the process of listing and renting ad spaces on AI
+                agents and social platforms.
+              </div>
+            </div>
+          </div>
+          <div className="AIPowered">
+            <div className="AIPowered__text--container">
+              <div className="AIPowered__header">
+                {" "}
+                <h3> Effortless Ad Space Rental</h3>
+              </div>
+              <div className="AIPowered__p">
+                Simplifies the process of listing and renting ad spaces on AI
+                agents and social platforms.
+              </div>
+            </div>
+          </div>
+          <div className="AIPowered">
+            <div className="AIPowered__text--container">
+              <div className="AIPowered__header">
+                {" "}
+                <h3> Effortless Ad Space Rental</h3>
+              </div>
+              <div className="AIPowered__p">
+                Simplifies the process of listing and renting ad spaces on AI
+                agents and social platforms.
+              </div>
+            </div>
+          </div>{" "}
+          <div className="AIPowered">
+            <div className="AIPowered__text--container">
+              <div className="AIPowered__header">
+                {" "}
+                <h3> Effortless Ad Space Rental</h3>
+              </div>
+              <div className="AIPowered__p">
+                Simplifies the process of listing and renting ad spaces on AI
+                agents and social platforms.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -162,8 +273,8 @@ const Addonai = () => {
         </div>
       </div>
 
-      <div className="page-5 page">
-        <div className="green-rect">
+      <div className="page-5 page" onMouseMove={handleMouseMove}>
+        <div className="green-rect" ref={greenRectRef}>
           <div className="green-rect-text">
             <h3 className="grey-text">Optimized for security</h3>
             <p className="grey-text">
@@ -174,7 +285,7 @@ const Addonai = () => {
             </p>
             <button className="page-5-btn">
               Learn more
-              <EastOutlinedIcon style={{ color: "#00ac25" }}></EastOutlinedIcon>
+              <EastOutlinedIcon style={{ color: "#00ac25" }} />
             </button>
           </div>
           <div className="img-div">
