@@ -387,18 +387,21 @@ h1 {
 
 /* Common Styling for Both Sections with Enhanced Glassmorphism */
 .highlights {
-  padding: 32px;
+  /* padding: 64px; */
   display: flex;
   gap: 32px;
-  overflow-x: scroll;
-  width: 100%;
+  overflow: scroll;
+  /* width: 100%; */
 }
 
-.AIPowered,
-.fuelTheFuture,
-.joinTheFuture {
-  width: 500px;
-  height: 100%;
+.AIPowered {
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  height: 200px;
   padding: 32px;
   border: 1px solid rgba(0, 172, 37, 0.5);
   border-radius: 12px;
@@ -431,18 +434,6 @@ h1 {
   color: #e4e4e4;
   line-height: 38px;
   margin-bottom: 10px;
-
-  /* width: 80%; */
-}
-
-.fuelTheFuture__header {
-  line-height: 50px;
-}
-
-.AIPowered__header span,
-.fuelTheFuture__header span,
-.joinTheFuture__header span {
-  color: #40e0d0;
 }
 
 .AIPowered__p,
@@ -452,4 +443,29 @@ h1 {
   font-size: 12px;
   font-weight: 200;
   margin-top: 10px;
+}
+
+/* Styling for the highlights div scrollbar */
+.highlights {
+  overflow: auto;
+  scrollbar-width: thin; /* Firefox: thin scrollbar */
+  scrollbar-color: rgb(0, 172, 37) transparent; /* Firefox: thumb color and transparent track */
+}
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+.highlights::-webkit-scrollbar {
+  width: 1px; /* Width of the scrollbar */
+}
+
+.highlights::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+}
+
+.highlights::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 172, 37, 0.1) transparent; /* Green thumb */
+  border-radius: 10px; /* Rounded thumb */
+}
+
+.highlights::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 150, 32, 0.1) transparent; /* Darker green on hover */
 }

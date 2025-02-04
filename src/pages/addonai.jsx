@@ -126,54 +126,53 @@ const Addonai = () => {
             B2C Model <EastOutlinedIcon style={{ color: "#00ac25" }} />
           </button>
         </div>
-
-        <div className="highlights">
-          <div className="AIPowered">
-            <div className="AIPowered__text--container">
-              <div className="AIPowered__header">
-                {" "}
-                <h3> Effortless Ad Space Rental</h3>
-              </div>
-              <div className="AIPowered__p">
-                Simplifies the process of listing and renting ad spaces on AI
-                agents and social platforms.
-              </div>
+      </div>
+      <div className="highlights page">
+        <div className="AIPowered">
+          <div className="AIPowered__text--container">
+            <div className="AIPowered__header">
+              {" "}
+              <h3> Effortless Ad Space Rental</h3>
+            </div>
+            <div className="AIPowered__p">
+              Simplifies the process of listing and renting ad spaces on AI
+              agents and social platforms.
             </div>
           </div>
-          <div className="AIPowered">
-            <div className="AIPowered__text--container">
-              <div className="AIPowered__header">
-                {" "}
-                <h3> Effortless Ad Space Rental</h3>
-              </div>
-              <div className="AIPowered__p">
-                Simplifies the process of listing and renting ad spaces on AI
-                agents and social platforms.
-              </div>
+        </div>
+        <div className="AIPowered">
+          <div className="AIPowered__text--container">
+            <div className="AIPowered__header">
+              {" "}
+              <h3> Effortless Ad Space Rental</h3>
+            </div>
+            <div className="AIPowered__p">
+              Simplifies the process of listing and renting ad spaces on AI
+              agents and social platforms.
             </div>
           </div>
-          <div className="AIPowered">
-            <div className="AIPowered__text--container">
-              <div className="AIPowered__header">
-                {" "}
-                <h3> Effortless Ad Space Rental</h3>
-              </div>
-              <div className="AIPowered__p">
-                Simplifies the process of listing and renting ad spaces on AI
-                agents and social platforms.
-              </div>
+        </div>
+        <div className="AIPowered">
+          <div className="AIPowered__text--container">
+            <div className="AIPowered__header">
+              {" "}
+              <h3> Effortless Ad Space Rental</h3>
             </div>
-          </div>{" "}
-          <div className="AIPowered">
-            <div className="AIPowered__text--container">
-              <div className="AIPowered__header">
-                {" "}
-                <h3> Effortless Ad Space Rental</h3>
-              </div>
-              <div className="AIPowered__p">
-                Simplifies the process of listing and renting ad spaces on AI
-                agents and social platforms.
-              </div>
+            <div className="AIPowered__p">
+              Simplifies the process of listing and renting ad spaces on AI
+              agents and social platforms.
+            </div>
+          </div>
+        </div>{" "}
+        <div className="AIPowered">
+          <div className="AIPowered__text--container">
+            <div className="AIPowered__header">
+              {" "}
+              <h3> Effortless Ad Space Rental</h3>
+            </div>
+            <div className="AIPowered__p">
+              Simplifies the process of listing and renting ad spaces on AI
+              agents and social platforms.
             </div>
           </div>
         </div>
